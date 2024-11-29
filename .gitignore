@@ -7,3 +7,5 @@ attachments
 *.patch
 
 
+/src/main/resources/application-secrets.properties
+/src/test/resources/application-secrets.properties
