@@ -1,5 +1,7 @@
 spring.cache.type: none
 spring:
+  config:
+    import: classpath:/application-secrets-test.properties
   init:
     mode: always
   datasource:
