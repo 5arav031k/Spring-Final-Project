@@ -8,7 +8,7 @@
     - [Spring Modulith - Reference documentation](https://docs.spring.io/spring-modulith/docs/current-SNAPSHOT/reference/html/)
 
 ```
-  url: jdbc:postgresql://localhost:5432/jira
+  url: jdbc:postgresql://localhost:5433/jira
   username: jira
   password: JiraRush
 ```
@@ -30,3 +30,5 @@
 1. Розібратися зі структурою проєкту (onboarding).
 2. Видалити соціальні мережі: vk, yandex.
 3. Винести чутливу інформацію до окремого проперті файлу.
+4. Переробити тести так, щоб під час тестів використовувалася in memory БД (H2), а не PostgreSQL.
+5. Написати тести для всіх публічних методів контролера ProfileRestController.
