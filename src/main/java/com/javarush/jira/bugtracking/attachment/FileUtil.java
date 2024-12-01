@@ -17,15 +17,16 @@ import java.nio.file.Paths;
 public class FileUtil {
     private static final String ATTACHMENT_PATH = "./attachments/%s/";
 
-    public static void upload(MultipartFile multipartFile, Path directoryPath, String fileName) {
+    public static void upload(MultipartFile multipartFile, String directoryPath, String fileName) {
         if (multipartFile.isEmpty()) {
             throw new IllegalRequestDataException("Select a file to upload.");
         }
 
+        Path path = Path.of(directoryPath);
         try {
-            Files.createDirectories(directoryPath);
+            Files.createDirectories(path);
 
-            Path filePath = directoryPath.resolve(fileName);
+            Path filePath = path.resolve(fileName);
 
             Files.write(filePath, multipartFile.getBytes());
         } catch (IOException ex) {
