@@ -9,3 +9,4 @@ attachments
 
 /src/main/resources/application-secrets.properties
 /src/test/resources/application-secrets-test.properties
+/secrets.env

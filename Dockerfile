@@ -1,11 +1,8 @@
 FROM openjdk:17 AS build
 WORKDIR /workspace/app
 
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app-jira.jar
-
-ARG CONFIG_FILE=src/main/resources/application-secrets.properties
-COPY ${CONFIG_FILE} src/main/resources/application-secrets.properties
+COPY target/jira-1.0.jar app-jira.jar
+COPY resources ./resources
 
 EXPOSE 8080
 
